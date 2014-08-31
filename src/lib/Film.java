@@ -6,6 +6,7 @@
 
 package lib;
 
+import android.util.Log;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -15,18 +16,20 @@ import org.json.JSONObject;
  */
 public class Film {
   private String id, title, image, genre, tecnology, duration, year, 
-                 director, cast, description, nation;
-  public Film(JSONObject film) throws JSONException{
-    id = film.getString("id");
-    title = film.getString("title");
-    image = film.getString("image");
-    genre = film.getString("genre");
-    tecnology = film.getString("tecnology");
-    duration = film.getString("duration");
-    year = film.getString("release_year");
-    //director = film.getString("director");
-    //cast = film.getString("film_cast");
-    description = film.getString("description");
+                 director, cast, description, nation, origin;
+  public Film(JSONObject film){
+    id = getValue(film, "id");
+    title = getValue(film, "title");
+    image = getValue(film, "image");
+    genre = getValue(film, "genre");
+    tecnology = getValue(film, "tecnology");
+    duration = getValue(film, "duration");
+    year = getValue(film, "release_year");
+    director = getValue(film, "director");
+    cast = getValue(film, "film_cast");
+    description = getValue(film, "description");
+    nation = getValue(film, "nation");
+    origin = getValue(film, "origin");
   }
   
   public String getId(){ return id; }
@@ -39,11 +42,15 @@ public class Film {
   public String getDirector(){ return director; }
   public String getCast(){ return cast; }
   public String getDescription(){ return description; }
+  public String getNation(){ return nation; }
+  public String getOrigin(){ return origin; }
   
-  public String getBriefDescription(){
-    String result = description.substring(0, 200);
-    if(description.length() > result.length()){
-      result += "...";
+  private static String getValue(JSONObject item, String field){
+    String result = null;
+    try{
+      result = item.getString(field);
+    }catch(JSONException ex){
+      Log.e("Film", ex.toString());
     }
     return result;
   }

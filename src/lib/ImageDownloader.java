@@ -16,7 +16,7 @@ import java.util.HashMap;
 public class ImageDownloader {
   private static final HashMap<String,Bitmap> cache;
   static{
-    cache = new HashMap<String,Bitmap>();
+    cache = new HashMap<String,Bitmap>(20);
   }
   
   public ImageDownloader(){}

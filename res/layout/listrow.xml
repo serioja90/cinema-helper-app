@@ -5,11 +5,12 @@
 
     <ImageView
       android:id="@+id/image"
-      android:layout_width="100px"
-      android:layout_height="150px"
-      android:layout_marginLeft="4px"
-      android:layout_marginRight="10px"
-      android:layout_marginTop="4px"
+      android:layout_width="100dp"
+      android:layout_height="150dp"
+      android:layout_marginLeft="4dp"
+      android:layout_marginRight="10dp"
+      android:layout_marginTop="4dp"
+      android:contentDescription="@string/film_image"
     />
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
       android:orientation="vertical"
@@ -19,26 +20,26 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20px"
+        android:textSize="20sp"
         android:maxLines="1"
       />
       <TextView
         android:id="@+id/tecnology"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="11px"
+        android:textSize="11sp"
       />
       <TextView
         android:id="@+id/duration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="11px"
+        android:textSize="11sp"
       />
       <TextView
         android:id="@+id/description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="11px"
+        android:textSize="11sp"
         android:maxLines="7"
       />
     </LinearLayout>

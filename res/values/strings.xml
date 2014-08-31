@@ -2,4 +2,14 @@
 <resources>
     <string name="app_name">Cinema Helper</string>
     <string name="title">Title</string>
+    <string name="film_image">Immagine del film</string>
+    <string name="films_list">Elenco Film</string>
+    <string name="film_details">Dettagli Film</string>
+    <string name="genre">Genere: </string>
+    <string name="tecnology">Tecnologia: </string>
+    <string name="duration">Durata: </string>
+    <string name="director">Regia di: </string>
+    <string name="cast">Cast: </string>
+    <string name="year">Anno: </string>
+    <string name="nation">Nazione: </string>
 </resources>
